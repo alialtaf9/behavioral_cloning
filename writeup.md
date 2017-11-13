@@ -115,8 +115,8 @@ To capture good driving behavior, I first recorded two laps on track one using c
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to recover if it went off center. These images show what a recovery looks like starting from right and left respectively :
 
-![right](./images/rescue_right.jpg)
-![left](./images/rescue_left.jpg)
+![right](./images/rescue_from_right.jpg)
+![left](./images/rescue_from_left.jpg)
 
 
 To augment the data sat, I also flipped images and angles thinking that this would help the model generalize better. For example, here is an image that has then been flipped:
