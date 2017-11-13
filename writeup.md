@@ -56,17 +56,17 @@ The model.py file contains the code for training and saving the convolution neur
 
 My model (line 78) is based the the [NVIDIA](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) model. It consists of 5 convolutional layers and 3 fully connected layers. The first three convolutional layers have strided convolutions with 2x2 strides and a 5x5 kernel and the next two layers have 3x3 kernels.
 
-The model uses the RELU activation function to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer (code line 18).
+The model uses the RELU activation function to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer (code line 79).
 
 ####2. Attempts to reduce overfitting in the model
 
-The model contains dropout layers in order to reduce overfitting (model.py lines 21).
+The model contains dropout layers in order to reduce overfitting (model.py lines 87,89).
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 10-16). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
 ####3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 25).
+The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 94).
 
 ####4. Appropriate training data
 
@@ -88,7 +88,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 ####2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes:
+The final model architecture (model.py lines 78-92) consisted of a convolution neural network with the following layers and layer sizes:
 
 model = Sequential()
 model.add(Lambda(lambda x: x / 255.0 - 0.5, input_shape=(160,320,3)))
